@@ -119,3 +119,36 @@ function countPositivesSumNegatives(arr) {
     }
 }
 console.log(countPositivesSumNegatives([0, 0]))
+
+function unusualFive() {
+    //always return five without using numbers
+    const five = 'fiver'.length
+    return five
+}
+console.log(unusualFive())
+
+function abbrevName(name){
+    //return initails
+    const nameArr = name.split(' ')
+    const first = nameArr[0][0].toUpperCase()
+    const last = nameArr[1][0].toUpperCase()
+    return `${first}.${last}`
+}
+console.log(abbrevName('katie pestotnik'))
+
+function invert(array) {
+    //change positive to negative and vise verase, 0 to -0
+    if (!array) return []
+    const inverted = []
+    array.forEach((n) => {
+        if (n > 0 || n < 0) {
+            n *= -1
+            inverted.push(n)
+        } else {
+            n = -0
+            inverted.push(n)
+        }
+    })
+    return inverted
+}
+console.log(invert([]))
