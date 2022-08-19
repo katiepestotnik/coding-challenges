@@ -152,3 +152,43 @@ function invert(array) {
     return inverted
 }
 console.log(invert([]))
+
+function century(year) {
+    // return the century as number
+    if (year >= 1 && year <= 100) {
+        return 1
+    }
+    if (year > 100) {
+        return Math.ceil(year/100)
+    }
+}
+console.log(century(89))
+
+function bmi(weight, height) {
+    //calculate BMI (bmi = weight / height2)
+    //bmi <= 18.5 return "Underweight"
+    //bmi <= 25.0 return "Normal"
+    //bmi <= 30.0 return "Overweight"
+    //bmi > 30 return "Obese"
+    const bmi = weight / height ** 2
+    if (bmi <= 18.5) {
+        return 'Underweight'
+    } else if (bmi <= 25.0) {
+        return 'Normal'
+    } else if (bmi <= 30) {
+        return 'Overweight'
+    } else {
+        return 'Obese'
+    }
+}
+console.log(bmi(80, 1.8))
+
+function check(a, x) {
+    let checker;
+    a.forEach((ele) => {
+        ele === x ? checker = true : checker = false
+    })
+    return checker
+}
+  
+console.log(check([3, 'appdsdf', 'apple'], 'apple'))
