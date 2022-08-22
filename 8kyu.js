@@ -184,11 +184,19 @@ function bmi(weight, height) {
 console.log(bmi(80, 1.8))
 
 function check(a, x) {
-    let checker;
-    a.forEach((ele) => {
-        ele === x ? checker = true : checker = false
-    })
-    return checker
+    return a.includes(x)
 }
   
-console.log(check([3, 'appdsdf', 'apple'], 'apple'))
+console.log(check(['t', 'e', 's', 't'], 'e'))
+
+//Create a function with two arguments that will return an array of the first (n) multiples of (x).
+function countBy(x, n) {
+    let z = [];
+    for (let i = 1; i <= n; i++){
+        z.push(i * x)
+    }
+    return z;
+}
+console.log(countBy(2, 5))
+//[2,4,6,8,10]
+// 1*2, 2*2, 3*2, 4*2, 5*2
