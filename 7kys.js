@@ -17,9 +17,9 @@ function switcheroo(x){
 console.log(switcheroo('abcbac'))
 
 function arithmetic(a, b, operator){
-    if (operator === 'add') return a + b
-    if (operator === 'subtract') return a - b
-    if (operator === 'multiply') return a * b
-    if(operator === 'divide')return a/b
+    return operator === 'add' ? a + b
+        : operator === 'multiply' ? a * b
+        : operator === 'divide' ? a / b
+        : a - b        
 }
-console.log(arithmetic(3, 5, 'add'))
+console.log(arithmetic(3, 5, 'subtract'))
