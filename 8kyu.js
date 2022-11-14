@@ -224,3 +224,7 @@ console.log(countSheeps([true,  true,  true,  false,
     
 
 
+function sayHello(name) {
+    return `Hello ${name}`
+}
+
